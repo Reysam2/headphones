@@ -71,11 +71,11 @@
     /* header */
     .header-blk {
       width: 100%;
-       min-height: 100rem;
+      min-height: 100rem;
       flex: 1;
       display: grid;
-      grid-column: 1fr ;
-      background: url("/assets/images/headphones_hero_1.jpg");
+      grid-column: 1fr;
+      background: url("assets/images/headphones_hero_1.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       padding-bottom: 10rem;
@@ -83,7 +83,8 @@
 
     .header {
       display: flex;
-      height: 15rem;
+      align-items: end;
+      height: 25rem;
     }
 
     /* navigation */
@@ -103,61 +104,42 @@
       height: auto;
       width: 4rem;
       position: absolute;
-      top: 6rem;
+      top: 1rem;
       left: 2rem;
       cursor: pointer;
-      opacity: 1;
-      transition: all 0.125s;
+      transition: all 0.125s ease-in;
     }
 
     .nav__logo-blk {
       flex: 1.5;
-      display: grid;
-      grid-template-columns: 10rem 1fr 1rem;
-      place-content: center;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
       transition: all 0.125s;
+    }
+    .nav__logo {
+      max-width: 70%;
     }
 
     .nav__links-blk {
-      height: 15rem;
+      min-height: 10rem;
       background: #111e2f;
-      left: 0;
       width: 100%;
-      display: grid;
-      place-content: center;
-      list-style-type: none;
-      display: none;
-      margin-top: 3rem;
-    }
-
-    #check:checked ~ .nav__links-blk,
-    #check:checked ~ .fa-x i {
-      display: block;
-      position: absolute;
-      right: 20rem;
-      top: 10rem;
-    }
-
-    #check:checked ~ .nav__menu-blk {
-      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 2rem;
     }
 
     .fa-x {
+      width: 2rem;
+      background: red;
       position: absolute;
-      top: 6.7rem;
-      left: 3.5rem;
-      opacity: 0;
+      top: 1.9rem;
+      left: 2.9rem;
       cursor: pointer;
       font-size: 2.5rem;
-      transition: all 0.125s;
-    }
-
-    #check:checked ~ .nav__logo-blk i {
-      opacity: 1;
-    }
-
-    .check:checked ~ .nav__menu-blk {
-      opacity: 1;
+      transition: all 0.125s ease-out;
     }
 
     .nav__menu:hover,
@@ -186,7 +168,9 @@
     }
 
     .nav__link:hover,
-    .nav__link:active {
+    .nav__link:active,
+    .nav__link-item:hover,
+    .nav__link-item:active {
       color: var(--bg-accent);
     }
 
@@ -224,10 +208,10 @@
       font-size: clamp(2.5rem, 1vw, 3.5rem);
       text-align: center;
     }
-    
+
     .cta__heading-text {
       text-align: center;
-      margin-top:1rem;
+      margin-top: 1rem;
     }
 
     .cta__btn-blk {
@@ -261,7 +245,7 @@
       width: 100%;
       display: grid;
       place-items: center;
-      display: inherit; 
+      display: inherit;
     }
 
     .cta__message-blk {
@@ -281,7 +265,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* justify-content: center; */
     }
 
     .wwd__info-blk {
@@ -292,7 +275,7 @@
       justify-content: center;
       align-items: center;
       color: var(--clr-black);
-      margin-top:7rem;
+      margin-top: 7rem;
     }
 
     .wwd__info-heading-blk {
@@ -316,7 +299,7 @@
       grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
       row-gap: 8rem;
       align-items: center;
-      justify-content: center; 
+      justify-content: center;
     }
 
     .wwd__cards {
@@ -370,7 +353,7 @@
     .result-blk {
       min-height: 170rem;
       width: 100%;
-      background: url("/assets/images/headphones_hero_2.jpg") no-repeat;
+      background: url("assets/images/headphones_hero_2.jpg") no-repeat;
       background-size: cover;
       display: flex;
       flex-direction: column;
@@ -395,7 +378,7 @@
 
     .result__info-heading {
       text-align: center;
-   font-size: clamp(3.5rem, 1.5vw, 4rem);
+      font-size: clamp(3.5rem, 1.5vw, 4rem);
       color: var(--bg-white);
     }
 
@@ -412,12 +395,12 @@
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(4, 25rem);
-      row-gap: 3rem;;
+      row-gap: 3rem;
       place-items: center;
     }
 
     .result__pent-img-blk {
-      margin-top:10rem;
+      margin-top: 10rem;
       min-height: 80%;
       width: 80%;
       display: grid;
@@ -608,7 +591,7 @@
       flex: 1;
       display: grid;
       grid-column: 1fr;
-      background: url("/assets/images/headphones_hero_1.jpg");
+      background: url("assets/images/headphones_hero_1.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       padding-bottom: 10rem;
@@ -616,7 +599,8 @@
 
     .header {
       display: flex;
-      height: 15rem;
+      align-items: end;
+      height: 25rem;
     }
 
     /* navigation */
@@ -636,60 +620,36 @@
       height: auto;
       width: 4rem;
       position: absolute;
-      top: 6rem;
+      top: 1rem;
       left: 2rem;
       cursor: pointer;
-      opacity: 1;
-      transition: all 0.125s;
+      transition: all 0.125s ease-in;
     }
 
     .nav__logo-blk {
       flex: 1.5;
-      display: grid;
-      place-content: center;
+      display: flex;
+      justify-content: center;
       transition: all 0.125s;
     }
 
     .nav__links-blk {
-      height: 15rem;
+      min-height: 10rem;
       background: #111e2f;
-      left: 0;
       width: 100%;
-      display: grid;
-      place-content: center;
-      list-style-type: none;
-      display: none;
-      margin-top: 3rem;
-    }
-
-    #check:checked ~ .nav__links-blk,
-    #check:checked ~ .fa-x i {
-      display: block;
-      position: absolute;
-      right: 20rem;
-      top: 10rem;
-    }
-
-    #check:checked ~ .nav__menu-blk {
-      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 2rem;
     }
 
     .fa-x {
       position: absolute;
-      top: 6.7rem;
-      left: 3.5rem;
-      opacity: 0;
+      top: 1.9rem;
+      left: 2.9rem;
       cursor: pointer;
       font-size: 2.5rem;
-      transition: all 0.125s;
-    }
-
-    #check:checked ~ .nav__logo-blk i {
-      opacity: 1;
-    }
-
-    .check:checked ~ .nav__menu-blk {
-      opacity: 1;
+      transition: all 0.125s ease-out;
     }
 
     .nav__menu:hover,
@@ -718,7 +678,9 @@
     }
 
     .nav__link:hover,
-    .nav__link:active {
+    .nav__link:active,
+    .nav__link-item:hover,
+    .nav__link-item:active {
       color: var(--bg-accent);
     }
 
@@ -896,7 +858,7 @@
     .result-blk {
       height: 100rem;
       width: 100%;
-      background: url("/assets/images/headphones_hero_2.jpg") no-repeat;
+      background: url("assets/images/headphones_hero_2.jpg") no-repeat;
       background-size: cover;
       display: flex;
       flex-direction: column;
@@ -1132,7 +1094,7 @@
       flex: 1;
       display: grid;
       grid-column: 1fr;
-      background: url("/assets/images/headphones_hero_1.jpg");
+      background: url("assets/images/headphones_hero_1.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       padding-bottom: 10rem;
@@ -1167,6 +1129,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      visibility: visible!important;
       list-style-type: none;
     }
 
@@ -1354,7 +1317,7 @@
     .result-blk {
       height: 100rem;
       width: 100%;
-      background: url("/assets/images/headphones_hero_2.jpg") no-repeat;
+      background: url("assets/images/headphones_hero_2.jpg") no-repeat;
       background-size: cover;
       display: flex;
       flex-direction: column;
@@ -1587,7 +1550,7 @@
       flex: 1;
       display: grid;
       grid-column: 1fr;
-      background: url("/assets/images/headphones_hero_1.jpg");
+      background: url("assets/images/headphones_hero_1.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       padding-bottom: 10rem;
@@ -1613,22 +1576,17 @@
     }
 
     .nav__logo-blk {
-      flex: 1.5;
-      /* background: yellow; */
+      flex: 1.5; 
       display: grid;
       place-content: center;
-    }
-    /* 
-      .nav__logo {
-        
-      } */
+    } 
 
-    .nav__links-blk {
-      /* background: orange; */
+    .nav__links-blk { 
       flex: 2;
       display: flex;
       justify-content: center;
       align-items: center;
+      visibility: visible!important;
       list-style-type: none;
     }
 
@@ -1835,7 +1793,7 @@
     .result-blk {
       min-height: 100vh;
       width: 100%;
-      background: url("/assets/images/headphones_hero_2.jpg") no-repeat;
+      background: url("assets/images/headphones_hero_2.jpg") no-repeat;
       background-size: cover;
       display: flex;
       flex-direction: column;
