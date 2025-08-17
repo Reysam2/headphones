@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+ document.addEventListener('DOMContentLoaded', () => {
   const menuBtn = document.querySelector('#menu-btn');
   const closeBtn = document.querySelector('#close-btn');
   const ul = document.querySelector('#ul');
